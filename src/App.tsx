@@ -9,6 +9,7 @@ import { PredictorHub } from './components/PredictorHub';
 import { FavoritesPage } from './components/FavoritesPage';
 import { ToolDetail } from './components/ToolDetail';
 import { useLocalStorage } from './hooks/useLocalStorage';
+import { Footer } from './components/Footer';
 
 export default function App() {
   const [currentView, setCurrentView] = useState<'hub' | 'favorites' | 'detail'>('hub');
@@ -41,10 +42,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] font-sans text-slate-900 selection:bg-[#2d5a27]/20 selection:text-[#2d5a27]">
+    <div className="flex flex-col min-h-screen bg-[#f8fafc] font-sans text-slate-900 selection:bg-[#2d5a27]/20 selection:text-[#2d5a27]">
       <Navigation currentView={currentView} onNavigate={handleNavigate} />
       
-      <main className="pb-24">
+      <main className="flex-1 pb-16">
         {currentView === 'hub' && (
           <PredictorHub 
             favorites={favorites} 
@@ -71,6 +72,8 @@ export default function App() {
           />
         )}
       </main>
+
+      <Footer />
     </div>
   );
 }
