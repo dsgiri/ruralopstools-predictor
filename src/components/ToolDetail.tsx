@@ -38,28 +38,28 @@ export function ToolDetail({ toolId, isFavorite, onToggleFavorite, onBack, onOpe
       </button>
 
       <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm">
-        <div className="p-8 sm:p-12 border-b border-slate-100 bg-slate-50 relative">
-          <div className="flex items-start justify-between mb-6">
-            <div>
+        <div className="p-6 sm:p-8 md:p-12 border-b border-slate-100 bg-slate-50 relative">
+          <div className="flex items-start justify-between mb-4 sm:mb-6">
+            <div className="pr-12">
               <span className="text-[10px] font-bold uppercase tracking-widest text-[#2d5a27] bg-[#f0f4ef] px-2.5 py-1 rounded-full mb-3 inline-block">
                 {tool.category.replace(' prediction', '').replace(' movement', '').replace(' / pest risk', '').replace(' risk', '')}
               </span>
-              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900">
                 {tool.title}
               </h1>
             </div>
             <button
               onClick={(e) => onToggleFavorite(tool.id, e)}
               aria-label={isFavorite ? `Remove ${tool.title} from favorites` : `Add ${tool.title} to favorites`}
-              className="rounded-full p-3 bg-white shadow-sm text-slate-400 hover:text-red-500 transition-colors focus:outline-none focus:ring-2 focus:ring-[#2d5a27]"
+              className="absolute top-6 sm:top-8 md:top-12 right-6 sm:right-8 md:right-12 rounded-full p-2.5 sm:p-3 bg-white shadow-sm text-slate-400 hover:text-red-500 transition-colors focus:outline-none focus:ring-2 focus:ring-[#2d5a27]"
             >
               <Heart 
-                className={cn("h-6 w-6 transition-all", isFavorite ? "fill-red-500 text-red-500" : "fill-transparent")} 
+                className={cn("h-5 w-5 sm:h-6 sm:w-6 transition-all", isFavorite ? "fill-red-500 text-red-500" : "fill-transparent")} 
               />
             </button>
           </div>
           
-          <p className="text-xl text-slate-600 max-w-3xl leading-relaxed mb-8">
+          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl leading-relaxed mb-6 sm:mb-8">
             {tool.description}
           </p>
 
@@ -83,8 +83,8 @@ export function ToolDetail({ toolId, isFavorite, onToggleFavorite, onBack, onOpe
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-slate-200">
-          <div className="p-8 sm:p-12 lg:col-span-2">
-            <section className="mb-12">
+          <div className="p-6 sm:p-8 md:p-12 lg:col-span-2">
+            <section className="mb-10 sm:mb-12">
               <div className="flex items-center gap-2 mb-4">
                 <Info className="h-5 w-5 text-[#2d5a27]" />
                 <h2 className="text-2xl font-bold text-slate-900">Model Output & Confidence</h2>
@@ -120,8 +120,8 @@ export function ToolDetail({ toolId, isFavorite, onToggleFavorite, onBack, onOpe
             </section>
           </div>
 
-          <div className="p-8 sm:p-12 bg-slate-50">
-            <section className="mb-12">
+          <div className="p-6 sm:p-8 md:p-12 bg-slate-50">
+            <section className="mb-10 sm:mb-12">
               <h3 className="text-sm font-bold tracking-widest text-slate-500 uppercase mb-4">Inputs & Signals Used</h3>
               <ul className="space-y-3">
                 {tool.inputsUsed.map((input, idx) => (

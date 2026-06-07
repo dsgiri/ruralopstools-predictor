@@ -14,11 +14,11 @@ export function FavoritesPage({ favorites, onToggleFavorite, onOpenTool }: Favor
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-      <div className="max-w-3xl mb-12">
-        <h1 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">
+      <div className="max-w-3xl mb-8 sm:mb-12">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-3 sm:mb-4">
           My Favorites
         </h1>
-        <p className="text-lg text-slate-600 leading-relaxed">
+        <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
           Quick access to your saved prediction tools and models.
         </p>
       </div>

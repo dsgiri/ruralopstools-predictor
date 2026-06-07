@@ -63,11 +63,11 @@ export function PredictorHub({ favorites, onToggleFavorite, onOpenTool }: Predic
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-      <div className="max-w-3xl mb-12">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 mb-4">
+      <div className="max-w-3xl mb-8 sm:mb-12">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-3 sm:mb-4">
           Prediction & Insight Hub
         </h1>
-        <p className="text-lg text-slate-600 leading-relaxed">
+        <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
           Access model-driven predictions for crops, livestock, and markets. 
           Use these insights to estimate likely outcomes with measured confidence bands.
         </p>
@@ -106,7 +106,7 @@ export function PredictorHub({ favorites, onToggleFavorite, onOpenTool }: Predic
           />
         </div>
 
-        <div className="flex w-full sm:w-auto items-center gap-4">
+        <div className="flex flex-col sm:flex-row w-full sm:w-auto items-stretch sm:items-center gap-3 sm:gap-4">
           <div className="flex items-center gap-2">
             <SlidersHorizontal className="h-4 w-4 text-slate-500 hidden sm:block" />
             <select

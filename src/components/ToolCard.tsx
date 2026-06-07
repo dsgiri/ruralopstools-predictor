@@ -24,12 +24,12 @@ export function ToolCard({ tool, isFavorite, onToggleFavorite, onClick }: ToolCa
 
   const getConfidenceBar = (level: string) => {
     if (level === 'High') {
-      return <div className="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden"><div className="bg-green-500 w-[85%] h-full"></div></div>;
+      return <div className="w-full max-w-[6rem] h-1.5 bg-slate-100 rounded-full overflow-hidden"><div className="bg-green-500 w-[85%] h-full"></div></div>;
     }
     if (level === 'Medium') {
-      return <div className="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden"><div className="bg-amber-500 w-[60%] h-full"></div></div>;
+      return <div className="w-full max-w-[6rem] h-1.5 bg-slate-100 rounded-full overflow-hidden"><div className="bg-amber-500 w-[60%] h-full"></div></div>;
     }
-    return <div className="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden"><div className="bg-red-500 w-[30%] h-full"></div></div>;
+    return <div className="w-full max-w-[6rem] h-1.5 bg-slate-100 rounded-full overflow-hidden"><div className="bg-red-500 w-[30%] h-full"></div></div>;
   };
 
   const formatCategory = (category: string) => {
