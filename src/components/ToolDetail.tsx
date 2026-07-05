@@ -5,6 +5,7 @@ import { Heart, ArrowLeft, Info, AlertTriangle, PlayCircle } from 'lucide-react'
 import { cn } from '../lib/utils';
 import { ConfidenceChart } from './ConfidenceChart';
 import { useSEO } from '../hooks/useSEO';
+import { DisclaimerNotice } from './DisclaimerNotice';
 
 interface ToolDetailProps {
   toolId: string;
@@ -99,10 +100,12 @@ export function ToolDetail({ toolId, isFavorite, onToggleFavorite, onBack, onOpe
               <p className="text-slate-700 mb-6 font-medium leading-relaxed">
                 {tool.predictionOutput}
               </p>
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 sm:p-6">
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 sm:p-6 mb-6">
                 <h3 className="text-sm font-bold tracking-wide text-slate-500 uppercase mb-4">Uncertainty Band Projection (Example)</h3>
                 <ConfidenceChart />
               </div>
+              
+              <DisclaimerNotice />
             </section>
 
             <section>

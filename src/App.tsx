@@ -8,17 +8,18 @@ import { Navigation } from './components/Navigation';
 import { PredictorHub } from './components/PredictorHub';
 import { FavoritesPage } from './components/FavoritesPage';
 import { ToolDetail } from './components/ToolDetail';
+import { DisclaimerPage } from './components/DisclaimerPage';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { Footer } from './components/Footer';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'hub' | 'favorites' | 'detail'>('hub');
+  const [currentView, setCurrentView] = useState<'hub' | 'favorites' | 'detail' | 'disclaimer'>('hub');
   const [activeToolId, setActiveToolId] = useState<string | null>(null);
   const [favorites, setFavorites] = useLocalStorage<string[]>('rural-utility-favorites', []);
 
   const handleNavigate = (view: string) => {
-    if (view === 'hub' || view === 'favorites') {
-      setCurrentView(view);
+    if (view === 'hub' || view === 'favorites' || view === 'disclaimer') {
+      setCurrentView(view as any);
       setActiveToolId(null);
       window.scrollTo(0, 0);
     }
@@ -71,9 +72,13 @@ export default function App() {
             onOpenTool={handleOpenTool}
           />
         )}
+
+        {currentView === 'disclaimer' && (
+          <DisclaimerPage />
+        )}
       </main>
 
-      <Footer />
+      <Footer onNavigate={handleNavigate} />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { ToolCard } from './ToolCard';
 import { Search, SlidersHorizontal } from 'lucide-react';
 import { SectionExplanation } from './SectionExplanation';
 import { useSEO } from '../hooks/useSEO';
+import { DisclaimerNotice } from './DisclaimerNotice';
 
 interface PredictorHubProps {
   favorites: string[];
@@ -74,10 +75,11 @@ export function PredictorHub({ favorites, onToggleFavorite, onOpenTool }: Predic
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-3 sm:mb-4">
           Prediction & Insight Hub
         </h1>
-        <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-          Access model-driven predictions for crops, livestock, and markets. 
+        <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-6">
+          Predictor is the model-based prediction and confidence hub for Rural Ops Tools. Access model-driven predictions for crops, livestock, and markets. 
           Use these insights to estimate likely outcomes with measured confidence bands.
         </p>
+        <DisclaimerNotice variant="short" className="max-w-2xl bg-white shadow-sm" />
       </div>
 
       {favoritesList.length > 0 && (

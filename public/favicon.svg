@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Background -->
+  <rect width="256" height="256" rx="64" fill="#0f172a"/>
+  
+  <!-- Line Chart / Growth -->
+  <path d="M48 180 L96 112 L144 144 L208 64" fill="none" stroke="#4ade80" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Trend Arrow -->
+  <path d="M160 64 L208 64 L208 112" fill="none" stroke="#4ade80" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Dot / Node -->
+  <circle cx="208" cy="64" r="16" fill="#4ade80"/>
+  <circle cx="144" cy="144" r="12" fill="#0f172a" stroke="#4ade80" stroke-width="12"/>
+  <circle cx="96" cy="112" r="12" fill="#0f172a" stroke="#4ade80" stroke-width="12"/>
+  <circle cx="48" cy="180" r="12" fill="#0f172a" stroke="#4ade80" stroke-width="12"/>
+</svg>
